@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.dash{
+	display:flex;
+	justify-content:center;
+	align-content:center;
+	margin:20vh;
+}
+.dash-icons{
+	display:inline;
+	width:10vw;
+
+	
+}
+.dash-menu{
+	padding:8vh;
+}
+.dash-text{
+	font-size:1vw;
+	overflow:none;
+	text-align:center;
+}
