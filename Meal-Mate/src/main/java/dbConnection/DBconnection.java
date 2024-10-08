@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class DBconnection {
-	public static String Url="jdbc:mysql://localhost:3306/db";
+	public static String Url="jdbc:mysql://localhost:3306/resdb";
 	public static String Username="root";
 	public static String Password="";
 	

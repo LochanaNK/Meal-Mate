@@ -33,6 +33,23 @@ public class RestaurantController extends HttpServlet {
 				restaurant.addRestaurant(newRestaurant);
 			} catch (SQLException e) {
 				e.printStackTrace();
+			} catch (ClassNotFoundException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			response.sendRedirect("manage-restaurants.jsp"); 
+		}
+		else if("removeRestaurant".equals(action)) {
+			String name=request.getParameter("name");
+			Restaurants newRestaurant=new Restaurants();
+			RestaurantsQueries restaurant=new RestaurantsQueries();
+			
+			newRestaurant.setName(name);
+			try {
+				restaurant.removeRestaurant(name);
+			}catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
 			}
 			response.sendRedirect("manage-restaurants.jsp"); 
 		}
