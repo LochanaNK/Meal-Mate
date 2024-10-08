@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
-.forms{
-
+.add,remove{
+	display:flex;
+	flex-direction:column;
+	justify-content:center;
+}
+.label,input{
+	display:flex;
+	flex-direction:column;
 }
