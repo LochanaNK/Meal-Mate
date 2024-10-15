@@ -1,7 +1,6 @@
 package controllers;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -12,47 +11,31 @@ import java.sql.SQLException;
 
 import services.RestaurantsQueries;
 
+
+
 public class RestaurantController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		String action =request.getParameter("action");
-		
-		if("addRestaurant".equals(action)) {
-			String name=request.getParameter("name");
-			String email=request.getParameter("email");
-			String contact=request.getParameter("contact");
-			Restaurants newRestaurant=new Restaurants(name,email,contact);
-			RestaurantsQueries restaurant =new RestaurantsQueries();
-			
-			newRestaurant.setName(name);
-			newRestaurant.setEmail(email);
-			newRestaurant.setContact(contact);
+			int a_id = Integer.parseInt(request.getParameter("a_id"));
+	        String resName = request.getParameter("res_name");
+	        String email = request.getParameter("email");
+	        String phone = request.getParameter("phone");
+	        String address = request.getParameter("address");
+			String image=request.getParameter("image");
+			Restaurants newRestaurant=new Restaurants(resName,email,phone,address,image,a_id);
 			try {
-				restaurant.addRestaurant(newRestaurant);
+				RestaurantsQueries.addRestaurant(newRestaurant);
 			} catch (SQLException e) {
+				System.out.println(e);
 				e.printStackTrace();
 			} catch (ClassNotFoundException e) {
-				// TODO Auto-generated catch block
+				System.out.println(e);
 				e.printStackTrace();
 			}
-			response.sendRedirect("manage-restaurants.jsp"); 
-		}
-		else if("removeRestaurant".equals(action)) {
-			String name=request.getParameter("name");
-			Restaurants newRestaurant=new Restaurants();
-			RestaurantsQueries restaurant=new RestaurantsQueries();
-			
-			newRestaurant.setName(name);
-			try {
-				restaurant.removeRestaurant(name);
-			}catch (SQLException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-			response.sendRedirect("manage-restaurants.jsp"); 
-		}
+			response.sendRedirect("all-restaurant.jsp"); 
+		
 	}
 
 }
