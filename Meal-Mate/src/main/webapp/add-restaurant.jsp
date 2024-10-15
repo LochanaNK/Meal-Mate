@@ -57,7 +57,7 @@
                                         </li>
 
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
+                                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user0-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                                 <ul class="dropdown-user">
                                                     <li><a href="logout.jsp"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -102,7 +102,7 @@
 
                             </div>
                             
-                        </div>
+                    </div>
 
                         <div class="page-wrapper">
                            
@@ -110,71 +110,72 @@
                            
 
 
-    <div class="container">
-        <div class="col-lg-12">
-            <div class="card card-outline-primary">
-                <div class="card-header">
-                    <h4 class="m-b-0 text-white">Add Restaurant</h4>
-                </div>
-                <div class="card-body">
-                    <form action="RestaurantController" method="post" >
-                        <div class="form-body">
-                            <hr>
-                            <div class="row p-t-20">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Restaurant Name</label>
-                                        <input type="text" name="res_name" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Restaurant Admin ID</label>
-                                        <input type="text" name="a_id" class="form-control" required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group has-danger">
-                                        <label class="control-label">Business E-mail</label>
-                                        <input type="text" name="email" class="form-control form-control-danger" required>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row p-t-20">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label class="control-label">Phone</label>
-                                        <input type="text" name="phone" class="form-control" required>
-                                    </div>
-                                </div>
-                          
-                                <div class="col-md-6">
-                                    <div class="form-group has-danger">
-                                        <label class="control-label">Image</label>
-                                        <input type="text" name="image" class="form-control form-control-danger" required>
-                                    </div>
-                                </div>
-                               
-                            </div>
-                            <h3 class="box-title m-t-40">Restaurant Address</h3>
-                            <hr>
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <textarea name="address" style="height:100px;" class="form-control" required></textarea>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-actions">
-                            <input type="submit" name="submit" class="btn btn-primary" value="Save">
-                            <a href="add-restaurant.jsp" class="btn btn-inverse">Cancel</a>
-                        </div>
-                      
-                    </form>
-                </div>
-            </div>
-        </div>
+						    <div class="container">
+						        <div class="col-lg-12">
+						            <div class="card card-outline-primary">
+						                <div class="card-header">
+						                    <h4 class="m-b-0 text-white">Add Restaurant</h4>
+						                </div>
+						                <div class="card-body">
+						                    <form action="RestaurantController" method="post" >
+						                        <div class="form-body">
+						                            <hr>
+						                            <div class="row p-t-20">
+						                                <div class="col-md-6">
+						                                    <div class="form-group">
+						                                        <label class="control-label">Restaurant Name</label>
+						                                        <input type="text" name="res_name" class="form-control" required>
+						                                    </div>
+						                                </div>
+						                                <div class="col-md-6">
+						                                    <div class="form-group">
+						                                        <label class="control-label">Restaurant Admin ID</label>
+						                                        <input type="text" name="a_id" class="form-control" required>
+						                                    </div>
+						                                </div>
+						                                <div class="col-md-6">
+						                                    <div class="form-group has-danger">
+						                                        <label class="control-label">Business E-mail</label>
+						                                        <input type="text" name="email" class="form-control form-control-danger" required>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                            <div class="row p-t-20">
+						                                <div class="col-md-6">
+						                                    <div class="form-group">
+						                                        <label class="control-label">Phone</label>
+						                                        <input type="text" name="phone" class="form-control" required>
+						                                    </div>
+						                                </div>
+						                          
+						                                <div class="col-md-6">
+						                                    <div class="form-group has-danger">
+						                                        <label class="control-label">Image</label>
+						                                        <input type="text" name="image" class="form-control form-control-danger" required>
+						                                    </div>
+						                                </div>
+						                               
+						                            </div>
+						                            <h3 class="box-title m-t-40">Restaurant Address</h3>
+						                            <hr>
+						                            <div class="row">
+						                                <div class="col-md-12">
+						                                    <div class="form-group">
+						                                        <textarea name="address" style="height:100px;" class="form-control" required></textarea>
+						                                    </div>
+						                                </div>
+						                            </div>
+						                        </div>
+						                        <div class="form-actions">
+						                            <input type="submit" name="submit" class="btn btn-primary" value="Save">
+						                            <a href="add-restaurant.jsp" class="btn btn-inverse">Cancel</a>
+						                        </div>
+						                      
+						                    </form>
+						                </div>
+						            </div>
+						        </div>
+					     </div>
 
         <%@ include file="include/footer.jsp" %>
  </div>

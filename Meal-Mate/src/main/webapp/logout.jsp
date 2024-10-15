@@ -7,6 +7,12 @@
 <title>Insert title here</title>
 </head>
 <body>
+<%
+
+    session.invalidate();
+
+    response.sendRedirect("index.jsp");
+%>
 
 </body>
 </html>

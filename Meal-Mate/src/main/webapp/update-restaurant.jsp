@@ -100,7 +100,7 @@
 
                                     <ul class="navbar-nav my-lg-0">
                                         <li class="nav-item dropdown">
-                                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
+                                            <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user0-icn.png" alt="user" class="profile-pic" /></a>
                                             <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                                 <ul class="dropdown-user">
                                                     <li><a href="logout.php"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -121,9 +121,9 @@
                                     <ul id="sidebarnav">
                                         <li class="nav-devider"></li>
                                         <li class="nav-label">Home</li>
-                                        <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+                                        <li> <a href="dashboard.jsp"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                                         <li class="nav-label">Log</li>
-                                        <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
+                                        <li> <a href="all-users.jsp"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
                                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
                                             <ul aria-expanded="false" class="collapse">
                                                 <li><a href="all-restaurant.jsp">All Restaurants</a></li>
@@ -134,13 +134,13 @@
                                         </li>
                                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
                                             <ul aria-expanded="false" class="collapse">
-                                                <li><a href="all_menu.php">All Menues</a></li>
-                                                <li><a href="add_menu.php">Add Menu</a></li>
+                                                <li><a href="all-menu.jsp">All Menues</a></li>
+                                                <li><a href="add-menu.jsp">Add Menu</a></li>
 
 
                                             </ul>
                                         </li>
-                                        <li> <a href="all_orders.php"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
+                                        <li> <a href="all-orders.jsp"><i class="fa fa-shopping-cart" aria-hidden="true"></i><span>Orders</span></a></li>
 
                                     </ul>
                                 </nav>

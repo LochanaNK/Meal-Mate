@@ -27,7 +27,7 @@
             <div class="header">
                 <nav class="navbar top-navbar navbar-expand-md navbar-light">
                     <div class="navbar-header">
-                        <a class="navbar-brand" href="dashboard.php">
+                        <a class="navbar-brand" href="dashboard.jsp">
 
                             <span><img src="images/icn.png" alt="homepage" class="dark-logo" /></span>
                         </a>
@@ -63,7 +63,7 @@
 
 
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
+                                <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user0-icn.png" alt="user" class="profile-pic" /></a>
                                 <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                     <ul class="dropdown-user">
                                         <li><a href="logout.jsp"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -85,9 +85,9 @@
                         <ul id="sidebarnav">
                             <li class="nav-devider"></li>
                             <li class="nav-label">Home</li>
-                            <li> <a href="dashboard.php"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
+                            <li> <a href="dashboard.jsp"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
                             <li class="nav-label">Log</li>
-                            <li> <a href="all_users.php"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
+                            <li> <a href="all-users.jsp"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
                             <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
                                 <ul aria-expanded="false" class="collapse">
                                     <li><a href="all-restaurant.jsp">All Restaurants</a></li>

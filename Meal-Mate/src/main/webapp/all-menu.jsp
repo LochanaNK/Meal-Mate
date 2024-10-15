@@ -65,7 +65,7 @@
                                 
 
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user-icn.png" alt="user" class="profile-pic" /></a>
+                                    <a class="nav-link dropdown-toggle text-muted  " href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="images/bookingSystem/user0-icn.png" alt="user" class="profile-pic" /></a>
                                     <div class="dropdown-menu dropdown-menu-right animated zoomIn">
                                         <ul class="dropdown-user">
                                             <li><a href="logout.jsp"><i class="fa fa-power-off"></i> Logout</a></li>
@@ -148,7 +148,7 @@
 															dish=DishesQueries.getAllDishes();
 														
 														for(Map.Entry<Integer,HashMap<String,String>>entry:dish.entrySet()){
-
+															
 															HashMap<String,String> dish_details=entry.getValue();
 													
 													        out.println("<tr>");
@@ -158,7 +158,7 @@
 													        out.println("<td>" + dish_details.get("price") + "</td>");
 													        out.println("<td><div class='col-md-3 col-lg-8 m-b-10'><center><img src='Res_img/dishes/" + dish_details.get("image") + "' class='img-responsive radius' style='min-width:150px;min-height:100px;'/></center></div></td>");
 													        out.println("<td><a href='DishesDeleteController?dish_del=" + dish_details.get("d_id") + "' class='btn btn-danger btn-flat btn-addon btn-xs m-b-10'><i class='fa fa-trash-o' style='font-size:16px'></i></a>");
-													        out.println("<a href='update-dishes.jsp?dihs_upd=" + dish_details.get("d_id") + "' class='btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5'><i class='fa fa-edit'></i></a></td>");
+													        out.println("<a href='update-dishes.jsp?dish_upd=" + dish_details.get("d_id") + "' class='btn btn-info btn-flat btn-addon btn-sm m-b-10 m-l-5'><i class='fa fa-edit'></i></a></td>");
 													        out.println("</tr>");
 													   
 													}

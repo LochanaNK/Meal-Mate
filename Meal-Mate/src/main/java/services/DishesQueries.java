@@ -8,7 +8,6 @@ import java.util.HashMap;
 
 import dbConnection.DBconnection;
 import models.Dishes;
-import models.Restaurants;
 
 public class DishesQueries {
 
@@ -96,15 +95,16 @@ public class DishesQueries {
     }
 	
 	public static void updateDishes(Dishes dishes, String d_id) throws SQLException, ClassNotFoundException {
-        String query = "UPDATE dishes SET title = ?, slogan = ?, price = ?, image= ?  WHERE rs_id=?";
+        String query = "UPDATE dishes SET rs_id= ? ,title = ?, slogan = ?, price = ?, img= ?  WHERE d_id= ?";
         try (Connection con = DBconnection.getConnection(); PreparedStatement ps = con.prepareStatement(query)) {
-            ps.setString(1, dishes.getDishname());
-            ps.setString(2, dishes.getSlogan());
-            ps.setString(3, dishes.getPrice());
-            ps.setString(4, dishes.getImage());
-            ps.setString(5, d_id); 
-            System.out.println(ps);
+        	ps.setInt(1, dishes.getRs_id());
+            ps.setString(2, dishes.getDishname());
+            ps.setString(3, dishes.getSlogan());
+            ps.setString(4, dishes.getPrice());
+            ps.setString(5, dishes.getImage());
+            ps.setString(6, d_id); 
             int rs = ps.executeUpdate();
+            System.out.println(ps);
 
             if (rs==1) {
                 System.out.println("Update successful");
