@@ -32,6 +32,7 @@ public class DishesUpdateController extends HttpServlet {
 			e.printStackTrace();
 			System.out.println(e);
 		}catch(NumberFormatException e) {
+			e.printStackTrace();
 			System.out.println(e);
 		}
 		response.sendRedirect("all-menu.jsp");

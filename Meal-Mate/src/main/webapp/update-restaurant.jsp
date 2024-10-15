@@ -1,7 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<%@ page import="java.sql.*, java.io.*,java.util.*" %>
+<%@ page import="java.sql.*, java.io.*,java.util.*,jakarta.servlet.http.HttpSession" %>
 <%@ page import="dbConnection.DBconnection,services.RestaurantsQueries" %>
+<% String email=(String)request.getSession().getAttribute("u_email");
+	if(email==null){
+		response.sendRedirect("Index.jsp");
+	}
+%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,7 +34,7 @@
                         <div class="header">
                             <nav class="navbar top-navbar navbar-expand-md navbar-light">
                                 <div class="navbar-header">
-                                    <a class="navbar-brand" href="dashboard.php">
+                                    <a class="navbar-brand" href="#">
 
                                         <span><img src="images/icn.png" alt="homepage" class="dark-logo" /></span>
                                     </a>
@@ -58,39 +63,7 @@
                                                             <button type="submit" class="btn btn-info">Submit</button>
                                                         </form>
                                                     </li>
-                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
-                                                        <h4 class="m-b-20">List style</h4>
-
-                                                        <ul class="list-style-none">
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
-                                                        <h4 class="m-b-20">List style</h4>
-
-                                                        <ul class="list-style-none">
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                        </ul>
-                                                    </li>
-                                                    <li class="col-lg-3 col-xlg-3 m-b-30">
-                                                        <h4 class="m-b-20">List style</h4>
-
-                                                        <ul class="list-style-none">
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                            <li><a href="javascript:void(0)"><i class="fa fa-check text-success"></i> This Is Another Link</a></li>
-                                                        </ul>
-                                                    </li>
+                                                    
                                                 </ul>
                                             </div>
                                         </li>
@@ -121,8 +94,6 @@
                                     <ul id="sidebarnav">
                                         <li class="nav-devider"></li>
                                         <li class="nav-label">Home</li>
-                                        <li> <a href="dashboard.jsp"><i class="fa fa-tachometer"></i><span>Dashboard</span></a></li>
-                                        <li class="nav-label">Log</li>
                                         <li> <a href="all-users.jsp"> <span><i class="fa fa-user f-s-20 "></i></span><span>Users</span></a></li>
                                         <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-archive f-s-20 color-warning"></i><span class="hide-menu">Restaurant</span></a>
                                             <ul aria-expanded="false" class="collapse">
@@ -132,10 +103,10 @@
 
                                             </ul>
                                         </li>
-                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Menu</span></a>
+                                        <li> <a class="has-arrow  " href="#" aria-expanded="false"><i class="fa fa-cutlery" aria-hidden="true"></i><span class="hide-menu">Dishes</span></a>
                                             <ul aria-expanded="false" class="collapse">
-                                                <li><a href="all-menu.jsp">All Menues</a></li>
-                                                <li><a href="add-menu.jsp">Add Menu</a></li>
+                                                <li><a href="all-menu.jsp">All Dishes</a></li>
+                                                <li><a href="add-menu.jsp">Add Dishes</a></li>
 
 
                                             </ul>
